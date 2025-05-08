@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>L17.html</title>
+  <style type="text/css">pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #f9fafb;
+  background-color: #1f2937;
+}
+
+.preview-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .preview-content {
+    width: 66.666667%;
+  }
+}
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	   tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+	margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  line-height: 1.5; /* 2 */
+}
+
+
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+	--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+	--tw-ring-offset-width: 0px;
+	--tw-ring-offset-color: #fff;
+	--tw-ring-color: rgba(59, 130, 246, 0.5);
+	--tw-ring-offset-shadow: 0 0 #0000;
+	--tw-ring-shadow: 0 0 #0000;
+	--tw-shadow: 0 0 #0000;
+}
+
+.preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6 {
+	font-weight: 700;
+}
+
+.preview-content blockquote, .preview-content dl, .preview-content dd, .preview-content hr, .preview-content figure, .preview-content p, .preview-content pre {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.preview-content h1 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+
+.preview-content h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.preview-content h3 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+.preview-content h4 {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+}
+
+.preview-content h5 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.preview-content h6 {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.preview-content a {
+	--tw-text-opacity: 1;
+	color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+
+.preview-content a:hover {
+      text-decoration: underline;
+    }
+
+.preview-content pre, .preview-content code{
+    font-family: 'Fira Code', monospace;
+    -moz-tab-size: 2;
+      -o-tab-size: 2;
+         tab-size: 2;
+  }
+
+.preview-content pre, .preview-content code {
+	border-radius: 0.5rem;
+}
+
+.preview-content pre, .preview-content code {
+	--tw-bg-opacity: 1;
+	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.preview-content pre, .preview-content code {
+	--tw-bg-opacity: 0.1;
+}
+
+.preview-content img{
+    max-width: 100%;
+  }
+
+.preview-content pre {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.preview-content pre {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.preview-content pre code{
+      padding: 0;
+      background-color: transparent;
+    }
+
+.preview-content code {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.preview-content code {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.preview-content blockquote {
+	border-left-width: 4px;
+}
+
+.preview-content blockquote {
+	--tw-border-opacity: 1;
+	border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+}
+
+.preview-content blockquote {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.preview-content table{
+    table-layout: auto;
+  }
+
+.preview-content table *{
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+.preview-content table th, .preview-content table td {
+	border-width: 1px;
+}
+
+.preview-content table th, .preview-content table td {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.preview-content table th, .preview-content table td {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.preview-content table tr:nth-child(odd) {
+	--tw-bg-opacity: 1;
+	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+.preview-content table tr:nth-child(odd) {
+	--tw-bg-opacity: 0.1;
+}
+
+.preview-content ol{
+    padding: auto;
+    list-style: decimal;
+  }
+
+.preview-content li{
+    list-style-position: inside;
+  }
+
+.preview-content li input[type="checkbox"] {
+      margin: 0 0.5rem 0 0 !important;
+    }
+
+.preview-content li p{
+      display: inline-block;
+    }
+
+.preview-content ul ul {
+	padding-left: 1.5rem;
+}
+
+.preview-content ul{
+    list-style: disc;
+  }
+
+.hover\:bg-blue-600:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-600:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-10:hover {
+	--tw-bg-opacity: 0.1;
+}
+
+.hover\:bg-opacity-5:hover {
+	--tw-bg-opacity: 0.05;
+}
+
+.focus\:bg-blue-600:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.focus\:bg-red-600:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+}
+
+.focus\:bg-gray-100:focus {
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.focus\:bg-opacity-10:focus {
+	--tw-bg-opacity: 0.1;
+}
+
+.focus\:outline-none:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.focus\:ring:focus {
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	-webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+	        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-opacity-50:focus {
+	--tw-ring-opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+
+	.md\:block {
+		display: block;
+	}
+
+	.md\:hidden {
+		display: none;
+	}
+
+	.md\:w-72 {
+		width: 18rem;
+	}
+
+	.md\:items-center {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.lg\:mt-0 {
+		margin-top: 0px;
+	}
+
+	.lg\:block {
+		display: block;
+	}
+
+	.lg\:hidden {
+		display: none;
+	}
+
+	.lg\:w-6\/12 {
+		width: 50%;
+	}
+}
+</style>
+</head>
+<body>
+  <div class="preview-content"><h2 id="урок-17-：做客-a-namel17a">Урок 17 ：做客 <a name="L17"></a></h2>
+<h3 id="словарь-a-namew17a">Словарь <a name="W17"></a></h3>
+<table>
+<thead>
+<tr>
+<th id="__иероглиф__"><strong>Иероглиф</strong></th>
+<th id="__pinyin__"><strong>pinyin</strong></th>
+<th id="__часть_речи__"><strong>Часть речи</strong></th>
+<th id="__перевод__"><strong>Перевод</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>做客</td>
+<td>zuòkè</td>
+<td>гл</td>
+<td>быть  гостем, гостить</td>
+</tr>
+<tr>
+<td>请进</td>
+<td>qǐngjìn</td>
+<td></td>
+<td>пожалуйста, входите</td>
+</tr>
+<tr>
+<td>真</td>
+<td>zhēn</td>
+<td>нар</td>
+<td>действительно</td>
+</tr>
+<tr>
+<td>干净</td>
+<td>gānjìng</td>
+<td>прил</td>
+<td>чистый, прибранный</td>
+</tr>
+<tr>
+<td>坐</td>
+<td>zuò</td>
+<td>гл</td>
+<td>сидеть, садиться</td>
+</tr>
+<tr>
+<td>哎呀</td>
+<td>āiyā</td>
+<td>межд</td>
+<td>ах</td>
+</tr>
+<tr>
+<td>客气</td>
+<td>kèqi</td>
+<td>прил</td>
+<td>вежливый</td>
+</tr>
+<tr>
+<td>一点儿</td>
+<td>yīdiǎnr</td>
+<td></td>
+<td>немного (в смысле кол-ва)</td>
+</tr>
+<tr>
+<td>有点儿</td>
+<td>yǒudiǎnr</td>
+<td></td>
+<td>немного (в смысле признака)</td>
+</tr>
+<tr>
+<td>心意</td>
+<td>xīnyì</td>
+<td>сущ</td>
+<td>намерение, желание, теплые чувства</td>
+</tr>
+<tr>
+<td>收下</td>
+<td>shōuxià</td>
+<td>гл</td>
+<td>принимать</td>
+</tr>
+<tr>
+<td>收</td>
+<td>shōu</td>
+<td>гл</td>
+<td>получать</td>
+</tr>
+<tr>
+<td>茶</td>
+<td>chá</td>
+<td>сущ</td>
+<td>чай</td>
+</tr>
+<tr>
+<td>果汁</td>
+<td>guǒzhī</td>
+<td>сущ</td>
+<td>фруктовый сок</td>
+</tr>
+<tr>
+<td>随便</td>
+<td>suíbiàn</td>
+<td>прил</td>
+<td>как угодно, запросто, любой</td>
+</tr>
+<tr>
+<td>行</td>
+<td>xíng</td>
+<td></td>
+<td>ладно</td>
+</tr>
+<tr>
+<td>路上</td>
+<td>lùshang</td>
+<td></td>
+<td>по дороге, по пути, на дороге</td>
+</tr>
+<tr>
+<td>顺利</td>
+<td>shùnlì</td>
+<td>прил</td>
+<td>успешный, благополучный</td>
+</tr>
+<tr>
+<td>上</td>
+<td>shàng</td>
+<td>сущ</td>
+<td>вверх, на</td>
+</tr>
+<tr>
+<td>挤</td>
+<td>jǐ</td>
+<td>прил</td>
+<td>тесный</td>
+</tr>
+<tr>
+<td>打车</td>
+<td>dǎchē</td>
+<td>гл</td>
+<td>брать такси, ловить машину</td>
+</tr>
+<tr>
+<td>空调</td>
+<td>kōngtiáo</td>
+<td>сущ</td>
+<td>кондиционер</td>
+</tr>
+<tr>
+<td>大巴</td>
+<td>dàbā</td>
+<td>сущ</td>
+<td>автобус ("большой хвост")</td>
+</tr>
+<tr>
+<td>地铁</td>
+<td>dìtiě</td>
+<td>сущ</td>
+<td></td>
+</tr>
+<tr>
+<td>饿</td>
+<td>è</td>
+<td>прил</td>
+<td>голодный</td>
+</tr>
+<tr>
+<td>吃</td>
+<td>chī</td>
+<td>гл</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>会</td>
+<td>huì</td>
+<td>мод.гл</td>
+<td>уметь</td>
+</tr>
+<tr>
+<td>试</td>
+<td>shì</td>
+<td>гл</td>
+<td>пробовать</td>
+</tr>
+<tr>
+<td>北方</td>
+<td>běifāng</td>
+<td></td>
+<td>Северный Китай</td>
+</tr>
+<tr>
+<td>速冻</td>
+<td>sùdòng</td>
+<td>прил</td>
+<td>быстрой заморозки</td>
+</tr>
+<tr>
+<td>麻烦</td>
+<td>máfan</td>
+<td>прил</td>
+<td>трудный, хлопотливый, беспокойный</td>
+</tr>
+<tr>
+<td>少人</td>
+<td>shǎorén</td>
+<td></td>
+<td>мало людей</td>
+</tr>
+<tr>
+<td>人少</td>
+<td>rénshǎo</td>
+<td></td>
+<td>малолюдье, людей мало</td>
+</tr>
+<tr>
+<td>特别是</td>
+<td>tèbiéshì</td>
+<td></td>
+<td>особенно, в особенности</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<iframe width="640" height="480" src="https://www.youtube.com/embed/R-ndnVKPlnk?si=N8dQKzbIYKQ_MWFv&amp;start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<hr />
+<h3 id="грамматика-a-nameg17a">Грамматика <a name="G17"></a></h3>
+<h4 id="устойчивые-выражения-“一点儿心意，请收下”-“什么都行”-a-nameg17-1a">Устойчивые выражения: “一点儿心意，请收下”, “什么都行” <a name="G17-1"></a></h4>
+<blockquote>
+  <p>При вручении небольшого подарка, принятое вежливое выражение - “一点儿心意，请收下” - "Небольшой знак внимания, пожалуйста примите".</p>
+</blockquote>
+<blockquote>
+  <p>При ответе на вопрос, "что будешь есть/пить?" часто испоьлзуют выражение - “什么都行” - "Все пойдем, что угодно".</p>
+</blockquote>
+<h4 id="альтернативный-вопрос-a-还是-b-？a-nameg17-2a">Альтернативный вопрос A 还是 B ？<a name="G17-2"></a></h4>
+<blockquote>
+  <p>При альтернативном вопросе предполагается выбор между предложенными вариантами ответа, при этом части повторяемого в вопросе сказуемого соединяют союзом 还是:</p>
+  <ul>
+  <li>你是俄罗斯人还是白俄罗斯人？- Ты русский или  белорус?</li>
+  <li>你 （是）喝茶还是咖啡？ - Ты пьешь чай или кофе?</li>
+  <li>(是）你去还是我去？- Ты пойдешь или я пойду?</li>
+  </ul>
+</blockquote>
+<h4 id="выражение-就是-a-nameg17-3a">Выражение 就是 <a name="G17-3"></a></h4>
+<blockquote>
+  <p>Выражение 就是 "именно, и есть" используется, когда говорящий хочет подчеркнуть информацию, выраженную в сказуемом:</p>
+  <ul>
+  <li>他就是刘老师</li>
+  <li>这儿就是图书馆</li>
+  </ul>
+</blockquote>
+<h4 id="модальный-глагол-会-a-nameg17-4a">Модальный глагол 会 <a name="G17-4"></a></h4>
+<blockquote>
+  <p>Модальный глагол 会 "уметь, мочь, владеть" указывает на возможность совершения того или иного действия в силу умения, обладания определенными навыками:</p>
+  <ul>
+  <li>我会包饺子</li>
+  <li>我会说英语，他不会说英语</li>
+  <li>你会骑自行车吗？</li>
+  </ul>
+</blockquote>
+<h3 id="доп-материалы-a-namea17a">Доп. материалы <a name="A17"></a></h3>
+<h4 id="溜了溜了-a-namea17-1a">溜了溜了 <a name="A17-1"></a></h4>
+<p>溜了溜了，不关我的事，我是无辜的。(Сваливаем, это не мое дело, я не виноват)<br />
+<img src="" width="50%" hspace="1"></p>
+<hr /></div>
+</body>
+</html>
+  
